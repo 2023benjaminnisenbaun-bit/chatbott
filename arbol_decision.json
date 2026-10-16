@@ -1,0 +1,38 @@
+{
+  "inicio": {
+    "texto": "¡Hola! Soy Flauta, tu bot futbolero de confianza ⚽. Para empezar a charlar, ¿cómo te llamás?",
+    "requiereInput": true,
+    "tipoInput": "nombre",
+    "inputPlaceholder": "Tu nombre aquí...",
+    "botonSubmit": "Continuar",
+    "siguiente": "menu_principal"
+  },
+  "menu_principal": {
+    "texto": "¡Un gusto, {nombre}! Contame, ¿sobre qué te gustaría hablar hoy?",
+    "opciones": [
+      { "texto": "1) ¿De qué equipo sos?", "siguiente": "pregunta_equipo" },
+      { "texto": "2) ¿Quién es tu jugador preferido?", "siguiente": "pregunta_jugador" },
+      { "texto": "Terminar conversación", "siguiente": "finalizado", "esSalir": true }
+    ]
+  },
+  "pregunta_equipo": {
+    "texto": "¡Qué gran pregunta, {nombre}! Yo no tengo un solo corazón, me encanta el fútbol en general. Pero si tengo que recomendarte algo, te sugiero ver partidos de la Champions League o de las ligas sudamericanas, ¡la pasión que se vive ahí es única! ¿Vos tenés algún club en mente?",
+    "opciones": [
+      { "texto": "Ver menú principal", "siguiente": "menu_principal" },
+      { "texto": "Terminar conversación", "siguiente": "finalizado", "esSalir": true }
+    ]
+  },
+  "pregunta_jugador": {
+    "texto": "Para mí, el mejor de la historia y mi preferido indiscutido es Lionel Messi 🐐. Mi recomendación es que disfrutes cada partido que juegue mientras siga en actividad, porque es talento puro. ¿Te gusta su estilo o preferís a otro?",
+    "opciones": [
+      { "texto": "Ver menú principal", "siguiente": "menu_principal" },
+      { "texto": "Terminar conversación", "siguiente": "finalizado", "esSalir": true }
+    ]
+  },
+  "finalizado": {
+    "texto": "¡Muchas gracias por charlar conmigo, {nombre}! Que tengas un excelente día y ¡que viva el fútbol! ⚽",
+    "opciones": [
+      { "texto": "Volver a empezar", "siguiente": "inicio" }
+    ]
+  }
+}
