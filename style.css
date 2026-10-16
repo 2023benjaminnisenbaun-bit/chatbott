@@ -1,0 +1,183 @@
+/* Reset básico y tipografía */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #0f172a;
+  color: #334155;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 10px;
+}
+
+/* Contenedor Principal estilo Smartphone / App Chat */
+.chat-container {
+  width: 100%;
+  max-width: 420px;
+  height: 90vh;
+  max-height: 750px;
+  background-color: #f8fafc;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid #cbd5e1;
+}
+
+/* Encabezado */
+.chat-header {
+  background-color: #166534;
+  color: #ffffff;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.bot-avatar {
+  font-size: 28px;
+  background-color: #22c55e;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bot-info h1 {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.bot-info .status {
+  font-size: 0.75rem;
+  opacity: 0.9;
+}
+
+/* Zona de Chat (Mensajes) */
+.zona-de-chat {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: #f1f5f9;
+}
+
+.mensaje {
+  max-width: 80%;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  word-wrap: break-word;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.mensaje.bot {
+  background-color: #ffffff;
+  color: #0f172a;
+  align-self: flex-start;
+  border-bottom-left-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #22c55e;
+}
+
+.mensaje.usuario {
+  background-color: #15803d;
+  color: #ffffff;
+  align-self: flex-end;
+  border-bottom-right-radius: 2px;
+}
+
+.mensaje.error {
+  background-color: #fef2f2;
+  color: #991b1b;
+  border: 1px solid #fca5a5;
+  align-self: center;
+  width: 100%;
+  text-align: center;
+}
+
+/* Zona de Opciones (Controles interactivos) */
+.zona-de-opciones {
+  padding: 15px;
+  background-color: #ffffff;
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Botones de Opciones */
+.btn-opcion {
+  width: 100%;
+  padding: 12px 15px;
+  background-color: #ffffff;
+  color: #166534;
+  border: 1.5px solid #22c55e;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.btn-opcion:hover {
+  background-color: #22c55e;
+  color: #ffffff;
+}
+
+.btn-opcion.btn-salir {
+  border-color: #ef4444;
+  color: #dc2626;
+  margin-top: 4px;
+}
+
+.btn-opcion.btn-salir:hover {
+  background-color: #ef4444;
+  color: #ffffff;
+}
+
+/* Formulario de Input para excepciones de datos */
+.input-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.input-field {
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.input-field:focus {
+  border-color: #22c55e;
+}
+
+.input-error-text {
+  color: #dc2626;
+  font-size: 0.8rem;
+  display: none;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
